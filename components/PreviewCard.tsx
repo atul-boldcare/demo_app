@@ -1,7 +1,7 @@
 import { Box, Image, Text } from "native-base";
 import React, { FC } from "react";
 import { Feather } from "@expo/vector-icons";
-import { images } from "../components/Carousel";
+import { images } from "./ReviewsCarousel";
 
 export interface CardProps {
   imageUrl: string;

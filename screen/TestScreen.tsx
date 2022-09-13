@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import Carousel from "../components/Carousel";
+import ReviewCarousel from "../components/ReviewsCarousel";
 import Overview from "../components/Overview";
 import Section from "../components/Section";
 import Speciality from "../components/Speciality";
@@ -28,7 +28,7 @@ const TestScreen = () => {
             <Text fontWeight="bold">Real</Text> People,{" "}
             <Text fontWeight="bold">Unreal</Text> Stories
           </Text>
-          <Carousel />
+          <ReviewCarousel />
         </Box>
         <Box pb="100px" mx="auto">
           <Overview />

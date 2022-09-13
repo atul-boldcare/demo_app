@@ -16,8 +16,8 @@ const Card = () => {
         <Image
           borderRadius="20px"
           source={{ uri: "https://wallpaperaccess.com/full/317501.jpg" }}
-          width="180px"
-          height="180px"
+          width="150px"
+          height="150px"
           alt=""
         />
       </Box>
@@ -36,19 +36,19 @@ const Card = () => {
 
 const Bestsellers = () => {
   return (
-    <Box mx="auto">
-      <Text mx="20px" fontSize="24px" fontWeight="bold">
-        Bestsellers
+    <Box>
+      <Text mb="20px" mx="30px" fontSize="24px" fontWeight={700}>
+        Get products worth ₹3000
       </Text>
-      <Flex flexDir="row" flexWrap="wrap">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </Flex>
-      <Button mx="10px" my="20px" borderRadius={16} bg="#000">
-        SEE MORE
-      </Button>
+      <Box mx="30px">
+        <Flex flexDir="row" flexWrap="wrap">
+          <Card />
+          <Card />
+        </Flex>
+        {/* <Button mx="10px" my="20px" borderRadius={16} bg="#000">
+          SEE MORE
+        </Button> */}
+      </Box>
     </Box>
   );
 };

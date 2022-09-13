@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Text, Image } from "native-base";
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
+import OverviewCard from "./Overview/OverviewCard";
 
 const ProgressIcon = () => (
   <Box
@@ -79,10 +80,10 @@ const Overview = () => {
           <Text fontWeight="bold">90-day </Text>journey
         </Text>
       </Box>
-      <OverViewItem />
-      <OverViewItem />
-      <OverViewItem />
-      <OverViewItem />
+      <OverviewCard />
+      <OverviewCard />
+      <OverviewCard />
+      <OverviewCard />
     </Box>
   );
 };

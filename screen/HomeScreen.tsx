@@ -2,23 +2,47 @@ import React from "react";
 import { Box, ScrollView, Text, Button, Image } from "native-base";
 import Welcome from "../components/Welcome";
 import PreviewCard from "../components/PreviewCard";
-import Carousel from "../components/Carousel";
+import ReviewCarousel from "../components/ReviewsCarousel";
 import Specials from "../components/Specials";
 import Bestsellers from "../components/Bestsellers";
+import Section from "../components/Section";
+// import Plans from "../components/Plans";
+import OverviewCard from "../components/Overview/OverviewCard";
+import MeetDoctors from "../components/MeetDoctors";
+import DoctorReviews from "../components/DoctorReviews";
+import Hero from "../components/Hero/Hero";
+import PlanTileSelector from "../components/PlanTileSelector/PlanTileSelector";
+import { HowThePlanWorks } from "../components/HowThePlanWorks.tsx/HowThePlanWorks";
+import { Plans } from "../components/Plan/Plans";
+import { ChatWithUs } from "../components/ChatWithUs/ChatWithUs";
+import Overview from "../components/Overview/Overview";
+import Calls from "../components/Calls/Call";
 
 const HomeScreen = () => {
   return (
     <ScrollView pb="100px">
       <Welcome />
-      <PreviewCard />
+      <PlanTileSelector />
+      <Hero />
+      <HowThePlanWorks />
+      <ReviewCarousel />
+      <Plans />
+      <ChatWithUs />
+      <Bestsellers />
+      <DoctorReviews />
+      <Overview />
+      <Calls />
+      {/* <Overview /> */}
+      {/* <PreviewCard /> */}
+      {/* <Section />
       <Box shadow="9" mt="25px" bg="#fff" py="10px">
         <Text ml="25px" mb="10px" fontSize="24px">
           <Text fontWeight="bold">Real</Text> People,{" "}
           <Text fontWeight="bold">Unreal</Text> Stories
         </Text>
-        <Carousel />
+        <ReviewCarousel />
+        <Plans />
         <Button
-          // android_ripple={{ color: "#ccc" }}
           mx="10px"
           my="20px"
           borderRadius={16}
@@ -39,8 +63,22 @@ const HomeScreen = () => {
         />
       </Box>
 
-      <Specials />
+      <Box mt="10px">
+        <Text textAlign="center" mb="10px" fontSize="24px">
+          <Text fontWeight="bold">Overview </Text>of my{" "}
+          <Text fontWeight="bold">90-day </Text>journey
+        </Text>
+
+        <OverviewCard />
+        <OverviewCard />
+        <OverviewCard />
+        <OverviewCard />
+      </Box>
       <Bestsellers />
+      <MeetDoctors />
+      <DoctorReviews />
+      <DoctorReviews />
+      <DoctorReviews /> */}
     </ScrollView>
   );
 };

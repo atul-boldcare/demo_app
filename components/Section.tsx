@@ -9,6 +9,7 @@ export interface SubSectionProps {
 
 export interface SubSectionTextProps {
   text: string;
+  active: boolean;
 }
 
 const SubSection: FC<SubSectionProps> = ({ imageUrl, text }) => {
@@ -37,10 +38,15 @@ const SubSection: FC<SubSectionProps> = ({ imageUrl, text }) => {
   );
 };
 
-const SubSectionText: FC<SubSectionTextProps> = ({ text }) => {
+const SubSectionText: FC<SubSectionTextProps> = ({ text, active }) => {
   return (
-    <Box width="170px" borderRadius="10px" bg="#000" borderBottomRadius={0}>
-      <Text p="15px" fontSize="24px" color="white">
+    <Box
+      width="170px"
+      borderRadius="10px"
+      bg={active ? "#000" : "#fff"}
+      borderBottomRadius={0}
+    >
+      <Text p="15px" fontSize="24px" color={active ? "#fff" : "#000"}>
         {text}
       </Text>
     </Box>
@@ -64,35 +70,23 @@ const Section = () => {
     <Box shadow="9">
       <Flex mt="5px" flexDir="row" justifyContent="space-between">
         <Box position="relative" top={active === 0 ? "15px" : "0"}>
-          {active === 0 ? (
-            <Pressable onPress={() => pressHandler(active)}>
-              <SubSectionText text="Better Sex from Day 1" />
-            </Pressable>
-          ) : (
-            <Pressable onPress={() => pressHandler(active)}>
-              <SubSection
-                text="Better Sex from Day 1"
-                imageUrl="https://wallpaperaccess.com/full/317501.jpg"
-              />
-            </Pressable>
-          )}
+          <Pressable onPress={() => pressHandler(active)}>
+            <SubSectionText
+              active={active === 0 ? true : false}
+              text="Better Sex from Day 1"
+            />
+          </Pressable>
         </Box>
         <Box position="relative" top={active === 1 ? "15px" : "0"}>
-          {active === 1 ? (
-            <Pressable onPress={() => pressHandler(active)}>
-              <SubSectionText text="Last Longer in Bed" />
-            </Pressable>
-          ) : (
-            <Pressable onPress={() => pressHandler(active)}>
-              <SubSection
-                text="Last Longer in Bed"
-                imageUrl="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
-              />
-            </Pressable>
-          )}
+          <Pressable onPress={() => pressHandler(active)}>
+            <SubSectionText
+              active={active === 1 ? true : false}
+              text="Last Longer in Bed"
+            />
+          </Pressable>
         </Box>
       </Flex>
-      <Box>
+      {/* <Box>
         <Pressable onPress={() => pressHandler(active)}>
           <Image
             source={{ uri: images[active] }}
@@ -102,7 +96,7 @@ const Section = () => {
             borderRadius="20px"
           />
         </Pressable>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
